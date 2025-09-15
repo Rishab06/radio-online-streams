@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MessageCircle, HelpCircle, Clock, Globe } from "lucide-react";
+import { Phone, HelpCircle, Clock, Globe } from "lucide-react";
 
 const Support = () => {
   const supportOptions = [
@@ -11,22 +11,6 @@ const Support = () => {
       contact: "866-408-0361",
       action: "Call Now",
       color: "from-green-500 to-green-600",
-    },
-    {
-      icon: MessageCircle,
-      title: "Live Chat",
-      description: "Get instant help from our support team",
-      contact: "Available 24/7",
-      action: "Start Chat",
-      color: "from-blue-500 to-blue-600",
-    },
-    {
-      icon: Mail,
-      title: "Email Support",
-      description: "Send us detailed questions and get responses within 2 hours",
-      contact: "support@radioonline.com",
-      action: "Send Email",
-      color: "from-purple-500 to-purple-600",
     },
   ];
 
@@ -65,7 +49,7 @@ const Support = () => {
         </div>
 
         {/* Support Options */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 mb-16 max-w-md mx-auto">
           {supportOptions.map((option, index) => (
             <Card key={index} className="card-gradient border-border/50 hover:border-accent/50 transition-smooth text-center group">
               <CardHeader>

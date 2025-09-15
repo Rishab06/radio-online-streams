@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Radio, Music, Mic, Trophy, Play, Globe, Clock, Star } from "lucide-react";
+import servicesBackground from "@/assets/services-background.jpg";
 
 const Services = () => {
   const services = [
@@ -39,8 +40,15 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-background/50 backdrop-blur-sm">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-background/50 backdrop-blur-sm relative">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" 
+        style={{ backgroundImage: `url(${servicesBackground})` }}
+      />
+      {/* Dark gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/60 to-card/70" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             All Your Entertainment

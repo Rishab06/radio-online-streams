@@ -6,23 +6,6 @@ import { Check, Star, Crown, Zap } from "lucide-react";
 const PricingPlans = () => {
   const plans = [
     {
-      name: "Free",
-      price: "0",
-      period: "forever",
-      description: "Perfect for casual listeners",
-      icon: Zap,
-      features: [
-        "10,000+ Radio Stations",
-        "Basic Music Library",
-        "Limited Podcasts",
-        "Sports Highlights",
-        "Ads Included",
-        "Standard Quality"
-      ],
-      buttonText: "Get Started",
-      popular: false,
-    },
-    {
       name: "Premium",
       price: "9.99",
       period: "month",
@@ -77,7 +60,7 @@ const PricingPlans = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {plans.map((plan, index) => (
             <Card 
               key={index} 

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Play, Star, Users, Headphones } from "lucide-react";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   const stats = [
@@ -10,8 +11,13 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" 
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      />
       {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-secondary" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-card/70 to-secondary/80" />
       
       {/* Animated background elements */}
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float" />

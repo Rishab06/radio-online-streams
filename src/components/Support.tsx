@@ -1,40 +1,29 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, HelpCircle, Clock, Globe } from "lucide-react";
-
 const Support = () => {
-  const supportOptions = [
-    {
-      icon: Phone,
-      title: "24/7 Phone Support",
-      description: "Talk to our experts anytime, day or night",
-      contact: "866-408-0361",
-      action: "Call Now",
-      color: "from-green-500 to-green-600",
-    },
-  ];
-
-  const faqs = [
-    {
-      question: "How do I start my free trial?",
-      answer: "Simply click 'Start Free Trial' and create your account. No credit card required for the first 30 days.",
-    },
-    {
-      question: "Can I cancel anytime?",
-      answer: "Yes! You can cancel your subscription at any time from your account settings. No cancellation fees.",
-    },
-    {
-      question: "Is RadioOnline available worldwide?",
-      answer: "RadioOnline is available in 180+ countries. Content may vary by region due to licensing agreements.",
-    },
-    {
-      question: "What audio quality do you offer?",
-      answer: "We offer multiple quality levels: Standard (128kbps), HD (320kbps), and Ultra HD (FLAC) for Elite subscribers.",
-    },
-  ];
-
-  return (
-    <section id="support" className="py-20 bg-background/50 backdrop-blur-sm">
+  const supportOptions = [{
+    icon: Phone,
+    title: "24/7 Phone Support",
+    description: "Talk to our experts anytime, day or night",
+    contact: "866-408-0361",
+    action: "Call Now",
+    color: "from-green-500 to-green-600"
+  }];
+  const faqs = [{
+    question: "How do I start my free trial?",
+    answer: "Simply click 'Start Free Trial' and create your account. No credit card required for the first 30 days."
+  }, {
+    question: "Can I cancel anytime?",
+    answer: "Yes! You can cancel your subscription at any time from your account settings. No cancellation fees."
+  }, {
+    question: "Is RadioOnline available worldwide?",
+    answer: "RadioOnline is available in 180+ countries. Content may vary by region due to licensing agreements."
+  }, {
+    question: "What audio quality do you offer?",
+    answer: "We offer multiple quality levels: Standard (128kbps), HD (320kbps), and Ultra HD (FLAC) for Elite subscribers."
+  }];
+  return <section id="support" className="py-20 bg-background/50 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
@@ -50,8 +39,7 @@ const Support = () => {
 
         {/* Support Options */}
         <div className="grid grid-cols-1 gap-8 mb-16 max-w-md mx-auto">
-          {supportOptions.map((option, index) => (
-            <Card key={index} className="card-gradient border-border/50 hover:border-accent/50 transition-smooth text-center group">
+          {supportOptions.map((option, index) => <Card key={index} className="card-gradient border-border/50 hover:border-accent/50 transition-smooth text-center group">
               <CardHeader>
                 <div className="flex justify-center mb-4">
                   <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${option.color} flex items-center justify-center group-hover:scale-110 transition-spring`}>
@@ -67,8 +55,7 @@ const Support = () => {
                   {option.action}
                 </Button>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* FAQ Section */}
@@ -77,8 +64,7 @@ const Support = () => {
             Frequently Asked Questions
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {faqs.map((faq, index) => (
-              <Card key={index} className="card-gradient border-border/50">
+            {faqs.map((faq, index) => <Card key={index} className="card-gradient border-border/50">
                 <CardHeader>
                   <CardTitle className="text-lg text-foreground flex items-start space-x-3">
                     <HelpCircle className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
@@ -88,8 +74,7 @@ const Support = () => {
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
 
@@ -107,17 +92,12 @@ const Support = () => {
                   <Phone className="w-5 h-5 mr-2" />
                   Call 866-408-0361
                 </Button>
-                <Button variant="outline" className="border-accent/50 text-accent hover:bg-accent/10">
-                  <Globe className="w-5 h-5 mr-2" />
-                  Visit Help Center
-                </Button>
+                
               </div>
             </CardContent>
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Support;
